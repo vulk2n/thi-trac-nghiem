@@ -1,5 +1,27 @@
 <!DOCTYPE html>
 <html lang="vi">
+    <style>
+  /* Tối ưu riêng cho màn hình điện thoại (dưới 768px) */
+  @media (max-width: 768px) {
+    /* Cho khung đếm giờ/sidebar nằm gọn lên trên đầu, không đè lên câu hỏi */
+    .sidebar, #timer, #clock, div[style*="position: fixed"] {
+      position: relative !important;
+      width: 100% !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      margin-bottom: 15px !important;
+    }
+
+    /* Đảm bảo khung chứa câu hỏi hiển thị tràn màn hình */
+    .main-content, .container, body {
+      margin-left: 0 !important;
+      padding: 10px !important;
+      width: 100% !important;
+    }
+  }
+</style>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
