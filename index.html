@@ -12,35 +12,32 @@ body{ background: #f4f6f8; color: #2d3748; min-height: 100vh; }
 /* TRANG CHỦ */
 #home-page { max-width: 1100px; margin: 20px auto; padding: 15px; }
 .home-header { text-align: center; margin-bottom: 20px; }
-.home-header h1 { color: #1a365d; font-size: 22px; margin-bottom: 8px; line-height: 1.3; }
-.home-header p { color: #718096; font-size: 14px; }
+.home-header h1 { color: #1a365d; font-size: 20px; margin-bottom: 8px; line-height: 1.3; }
+.home-header p { color: #718096; font-size: 13px; }
 
-.year-selection-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
-.year-card { background: #fff; border: 2px solid #e2e8f0; border-radius: 12px; padding: 15px; text-align: center; cursor: pointer; transition: all 0.25s ease; }
-.year-card:hover, .year-card.active { border-color: #3182ce; background: #ebf8ff; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(49,130,206,0.15); }
-.year-card h2 { font-size: 18px; color: #2c5282; margin-bottom: 4px; }
-.year-card p { font-size: 12px; color: #718096; }
+.year-selection-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; }
+.year-card { background: #fff; border: 2px solid #e2e8f0; border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; transition: all 0.2s; }
+.year-card:hover, .year-card.active { border-color: #3182ce; background: #ebf8ff; }
+.year-card h2 { font-size: 16px; color: #2c5282; margin-bottom: 2px; }
+.year-card p { font-size: 11px; color: #718096; }
 
-.section-title { font-size: 16px; font-weight: bold; color: #1a365d; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #cbd5e0; }
-.exam-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; }
-.exam-card { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 2px solid transparent; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; transition: 0.2s; }
-.exam-card:hover { border-color: #3182ce; }
-.exam-card-title { font-size: 16px; font-weight: bold; color: #2c5282; margin-bottom: 6px; }
-.exam-card-info { font-size: 13px; color: #718096; margin-bottom: 15px; }
-.btn-start { background: #3182ce; color: #fff; text-align: center; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 14px; }
+.section-title { font-size: 15px; font-weight: bold; color: #1a365d; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #cbd5e0; }
+.exam-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.exam-card { background: #fff; border-radius: 10px; padding: 14px; border: 1px solid #e2e8f0; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; }
+.exam-card-title { font-size: 15px; font-weight: bold; color: #2c5282; margin-bottom: 4px; }
+.exam-card-info { font-size: 12px; color: #718096; margin-bottom: 12px; }
+.btn-start { background: #3182ce; color: #fff; text-align: center; padding: 8px; border-radius: 6px; font-weight: bold; font-size: 13px; }
 
 /* TRANG LÀM BÀI THI */
 #exam-page { display: none; min-height: 100vh; }
 .exam-layout { display: flex; width: 100%; min-height: 100vh; }
 
-/* SIDEBAR (Desktop) */
-.sidebar { width: 300px; background: #fff; border-right: 1px solid #e2e8f0; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; flex-shrink: 0; }
+/* SIDEBAR (MÁY TÍNH) */
+.sidebar { width: 280px; background: #fff; border-right: 1px solid #e2e8f0; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; flex-shrink: 0; }
 .sidebar-title { font-size: 12px; font-weight: bold; color: #718096; text-transform: uppercase; margin-bottom: 12px; }
-.question-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; max-height: 50vh; overflow-y: auto; padding-right: 2px; }
+.question-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; max-height: 60vh; overflow-y: auto; }
 
-/* Ô CÂU HỎI TRONG SIDEBAR */
-.q-badge { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; background: #ffffff; border: 1px solid #cbd5e0; color: #4a5568; font-weight: bold; border-radius: 8px; font-size: 13px; cursor: pointer; transition: 0.2s; min-height: 36px; }
-.q-badge:hover { background: #edf2f7; }
+.q-badge { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid #cbd5e0; color: #4a5568; font-weight: bold; border-radius: 6px; font-size: 13px; cursor: pointer; min-height: 36px; }
 .q-badge.answered { background: #3182ce; color: #fff; border-color: #3182ce; }
 .q-badge.correct { background: #00b894; color: #fff; border-color: #00b894; }
 .q-badge.wrong { background: #ff7675; color: #fff; border-color: #ff7675; }
@@ -50,94 +47,121 @@ body{ background: #f4f6f8; color: #2d3748; min-height: 100vh; }
 .timer-value { font-size: 20px; font-weight: bold; color: #2c5282; margin-top: 2px; }
 
 .btn-sidebar-group { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; }
-.btn-sidebar { width: 100%; padding: 10px; border: 1px solid #cbd5e0; background: #fff; border-radius: 8px; cursor: pointer; font-weight: bold; color: #4a5568; font-size: 13px; transition: 0.2s; }
-.btn-sidebar:hover { background: #f7fafc; }
+.btn-sidebar { width: 100%; padding: 10px; border: 1px solid #cbd5e0; background: #fff; border-radius: 8px; cursor: pointer; font-weight: bold; color: #4a5568; font-size: 13px; }
 
-.main-content { flex: 1; padding: 25px; overflow-y: auto; scroll-behavior: smooth; }
-.exam-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background: #fff; padding: 12px 18px; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-.exam-header h2 { font-size: 18px; color: #1a365d; }
-.q-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.03); position: relative; }
-.q-header { font-size: 15px; font-weight: bold; color: #2d3748; margin-bottom: 15px; line-height: 1.5; }
+.mobile-nav-btn { display: none; }
+
+.main-content { flex: 1; padding: 20px; overflow-y: auto; }
+.exam-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; background: #fff; padding: 12px 15px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.exam-header h2 { font-size: 16px; color: #1a365d; }
+.q-card { background: #fff; border-radius: 10px; padding: 16px; margin-bottom: 15px; box-shadow: 0 1px 4px rgba(0,0,0,0.03); position: relative; }
+.q-header { font-size: 14px; font-weight: bold; color: #2d3748; margin-bottom: 12px; line-height: 1.4; }
 
 /* CHỌN ĐÁP ÁN */
-.options-container { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
-.option-btn { display: flex; align-items: center; justify-content: space-between; padding: 12px 15px; border: 1.5px solid #e2e8f0; border-radius: 10px; cursor: pointer; background: #fff; transition: 0.2s; font-size: 14px; line-height: 1.4; }
-.option-btn:hover { background: #f7fafc; }
-.option-left { display: flex; align-items: center; gap: 10px; width: 100%; }
-.option-btn input { width: 18px; height: 18px; cursor: pointer; flex-shrink: 0; }
+.options-container { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+.option-btn { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border: 1.5px solid #e2e8f0; border-radius: 8px; cursor: pointer; background: #fff; font-size: 13px; line-height: 1.4; }
+.option-left { display: flex; align-items: center; gap: 8px; width: 100%; }
+.option-btn input { width: 16px; height: 16px; flex-shrink: 0; }
 .option-btn.selected { border-color: #3182ce; background: #ebf8ff; }
-.option-btn.opt-correct { border-color: #00b894; background: #e6fffa; color: #234e52; font-weight: 500; }
+.option-btn.opt-correct { border-color: #00b894; background: #e6fffa; color: #234e52; font-weight: bold; }
 .option-btn.opt-wrong { border-color: #ff7675; background: #fff5f5; color: #742a2a; }
 
 /* ĐIỀN TỪ */
-.fill-input { width: 100%; padding: 12px 15px; font-size: 14px; border: 2px solid #cbd5e0; border-radius: 8px; outline: none; margin-bottom: 10px; }
+.fill-input { width: 100%; padding: 10px 12px; font-size: 13px; border: 1.5px solid #cbd5e0; border-radius: 6px; outline: none; margin-bottom: 8px; }
 .fill-input.opt-correct { border-color: #00b894; background: #e6fffa; }
 .fill-input.opt-wrong { border-color: #ff7675; background: #fff5f5; }
 
 /* NỐI CỘT BẰNG SVG */
-.matching-wrapper { position: relative; display: flex; justify-content: space-between; gap: 40px; margin-bottom: 15px; user-select: none; }
+.matching-wrapper { position: relative; display: flex; justify-content: space-between; gap: 20px; margin-bottom: 12px; user-select: none; }
 .matching-svg-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10; }
-.m-col { width: 45%; z-index: 20; }
-.m-item { padding: 10px; border: 2px solid #cbd5e0; border-radius: 8px; margin-bottom: 10px; cursor: pointer; background: #fff; font-size: 13px; line-height: 1.4; transition: all 0.2s; word-break: break-word; }
-.m-item:hover { border-color: #3182ce; background: #f7fafc; }
-.m-item.selected { border-color: #3182ce; background: #ebf8ff; box-shadow: 0 0 0 3px rgba(49,130,206,0.2); }
-.m-item.matched { border-color: #3182ce; background: #ebf8ff; }
+.m-col { width: 48%; z-index: 20; }
+.m-item { padding: 8px 10px; border: 1.5px solid #cbd5e0; border-radius: 6px; margin-bottom: 8px; cursor: pointer; background: #fff; font-size: 12px; line-height: 1.3; word-break: break-word; }
+.m-item.selected, .m-item.matched { border-color: #3182ce; background: #ebf8ff; }
 .m-item.opt-correct { border-color: #00b894; background: #e6fffa; }
 .m-item.opt-wrong { border-color: #ff7675; background: #fff5f5; }
 
 /* GIẢI THÍCH */
-.explanation-box { border-top: 1px solid #edf2f7; padding-top: 12px; margin-top: 10px; }
-.exp-toggle { color: #3182ce; font-size: 13px; font-weight: bold; cursor: pointer; }
-.exp-content { display: none; background: #f7fafc; padding: 12px; border-radius: 8px; margin-top: 8px; font-size: 13px; color: #4a5568; line-height: 1.5; }
+.explanation-box { border-top: 1px solid #edf2f7; padding-top: 8px; margin-top: 8px; }
+.exp-toggle { color: #3182ce; font-size: 12px; font-weight: bold; cursor: pointer; }
+.exp-content { display: none; background: #f7fafc; padding: 10px; border-radius: 6px; margin-top: 6px; font-size: 12px; color: #4a5568; line-height: 1.4; }
 
-.submit-btn-container { text-align: center; margin: 30px 0 50px 0; }
-.btn-submit { padding: 14px 35px; font-size: 15px; font-weight: bold; color: #fff; background: #3182ce; border: none; border-radius: 8px; cursor: pointer; width: 100%; max-width: 300px; box-shadow: 0 4px 6px rgba(49,130,206,0.2); }
-.btn-submit:active { transform: scale(0.98); }
+.submit-btn-container { text-align: center; margin: 20px 0 40px 0; }
+.btn-submit { padding: 12px 30px; font-size: 14px; font-weight: bold; color: #fff; background: #3182ce; border: none; border-radius: 8px; cursor: pointer; width: 100%; max-width: 250px; }
 
-/* RESPONSIVE DÀNH RIÊNG CHO IPHONE & DI ĐỘNG (< 768px) */
+/* GIAO DIỆN TỐI ƯU SIÊU GỌN CHO IPHONE & ĐIỆN THOẠI (< 768px) */
 @media (max-width: 768px) {
-  #exam-page { height: auto; overflow: visible; }
+  #exam-page { height: auto; }
   .exam-layout { flex-direction: column; }
   
-  /* Sidebar chuyển thành dải cố định trên cùng trên iPhone */
+  /* Thanh đếm giờ cố định đỉnh màn hình - Chỉ cao 44px */
   .sidebar { 
     width: 100%; 
-    height: auto; 
+    height: 48px;
     position: sticky; 
     top: 0; 
     z-index: 1000; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-    padding: 10px 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08); 
+    padding: 0 12px;
     border-right: none;
     border-bottom: 1px solid #e2e8f0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
   }
   
   .sidebar-title { display: none; }
-  .timer-box { margin-bottom: 8px; padding: 6px 10px; display: flex; justify-content: space-between; align-items: center; }
-  .timer-value { font-size: 16px; margin-top: 0; }
   
-  .question-grid { 
+  .timer-box { 
+    background: transparent; 
+    border: none; 
+    padding: 0; 
+    margin: 0; 
     display: flex; 
-    overflow-x: auto; 
-    max-height: none; 
-    padding-bottom: 5px; 
+    align-items: center; 
     gap: 6px;
-    -webkit-overflow-scrolling: touch;
   }
-  .q-badge { min-width: 32px; height: 32px; font-size: 12px; border-radius: 6px; flex-shrink: 0; }
+  .timer-label { font-size: 11px; color: #4a5568; }
+  .timer-value { font-size: 15px; color: #2c5282; margin: 0; }
   
-  .btn-sidebar-group { flex-direction: row; gap: 6px; margin-top: 8px; }
-  .btn-sidebar { padding: 6px 10px; font-size: 11px; margin-top: 0; }
+  .btn-sidebar-group { display: none; }
 
-  .main-content { padding: 15px 12px; }
-  .exam-header { padding: 10px 12px; margin-bottom: 15px; }
-  .exam-header h2 { font-size: 15px; }
-  .q-card { padding: 15px; margin-bottom: 15px; }
-  .q-header { font-size: 14px; }
-  
-  .matching-wrapper { gap: 15px; }
-  .m-col { width: 48%; }
-  .m-item { padding: 8px; font-size: 12px; }
+  /* Nút Mở Danh Sách Câu Hỏi Dạng Modal trên iPhone */
+  .mobile-nav-btn { 
+    display: block; 
+    background: #ebf8ff; 
+    color: #2b6cb0; 
+    border: 1px solid #bbe1fa; 
+    padding: 5px 10px; 
+    border-radius: 6px; 
+    font-size: 12px; 
+    font-weight: bold; 
+    cursor: pointer;
+  }
+
+  /* Khung Modal chứa danh sách câu hỏi khi mở ra trên iPhone */
+  .question-grid { 
+    display: none; 
+    position: fixed; 
+    top: 48px; 
+    left: 0; 
+    right: 0; 
+    background: #fff; 
+    padding: 15px; 
+    border-bottom: 2px solid #cbd5e0; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
+    z-index: 999;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 8px; 
+    max-height: 50vh; 
+    overflow-y: auto; 
+  }
+  .question-grid.open { display: grid; }
+
+  .main-content { padding: 12px 10px; }
+  .exam-header { padding: 8px 12px; margin-bottom: 10px; }
+  .exam-header h2 { font-size: 14px; }
+  .q-card { padding: 12px; margin-bottom: 12px; }
 }
 </style>
 </head>
@@ -148,17 +172,17 @@ body{ background: #f4f6f8; color: #2d3748; min-height: 100vh; }
 <div id="home-page">
     <div class="home-header">
         <h1>NGÂN HÀNG BỘ ĐỀ THI TẬP ĐOÀN HÒA PHÁT</h1>
-        <p>Vui lòng chọn Năm để xem các bộ đề thi tương ứng</p>
+        <p>Chọn Năm để xem danh sách các bộ đề</p>
     </div>
 
     <div class="year-selection-grid">
         <div class="year-card active" id="year-card-2025" onclick="selectYear(2025)">
             <h2>NĂM 2025</h2>
-            <p>Danh sách 10 bộ đề năm 2025</p>
+            <p>10 bộ đề thi năm 2025</p>
         </div>
         <div class="year-card" id="year-card-2026" onclick="selectYear(2026)">
             <h2>NĂM 2026</h2>
-            <p>Danh sách bộ đề năm 2026</p>
+            <p>15 bộ đề thi năm 2026</p>
         </div>
     </div>
 
@@ -172,13 +196,20 @@ body{ background: #f4f6f8; color: #2d3748; min-height: 100vh; }
 <!-- 2. TRANG LÀM BÀI -->
 <div id="exam-page">
     <div class="exam-layout">
+        <!-- Thanh Header/Sidebar Cố Định -->
         <div class="sidebar">
+            <button class="mobile-nav-btn" onclick="toggleMobileGrid()">☰ Danh sách câu</button>
+            
             <div class="timer-box">
-                <div class="timer-label">THỜI GIAN LÀM BÀI:</div>
-                <div class="timer-value" id="timer">00:00:00</div>
+                <span class="timer-label">⏱️</span>
+                <span class="timer-value" id="timer">00:00:00</span>
             </div>
+
+            <button class="mobile-nav-btn" style="background:#fff5f5; color:#c53030; border-color:#feb2b2;" onclick="goHome()">↩ Thoát</button>
+
             <div class="sidebar-title">DANH SÁCH CÂU HỎI</div>
             <div class="question-grid" id="question-grid"></div>
+            
             <div class="btn-sidebar-group">
                 <button class="btn-sidebar" onclick="resetExam()">↺ Làm lại</button>
                 <button class="btn-sidebar" onclick="goHome()">↩ Trang chủ</button>
@@ -188,7 +219,7 @@ body{ background: #f4f6f8; color: #2d3748; min-height: 100vh; }
         <div class="main-content" id="main-content">
             <div class="exam-header">
                 <h2 id="current-exam-title">BỘ ĐỀ</h2>
-                <span style="font-weight: bold; color: #718096; font-size: 13px;" id="q-total-count">0 CÂU HỎI</span>
+                <span style="font-weight: bold; color: #718096; font-size: 12px;" id="q-total-count">0 CÂU HỎI</span>
             </div>
             <div id="quiz-container"></div>
             <div class="submit-btn-container">
@@ -208,7 +239,7 @@ for(let i = 1; i <= 10; i++) {
         year: 2025, 
         code: codeStr, 
         title: `BỘ ĐỀ ${codeStr} (NĂM 2025)`, 
-        description: `Bộ đề thi trắc nghiệm kiến thức số ${codeStr} thuộc năm 2025` 
+        description: `Bộ đề thi trắc nghiệm số ${codeStr} thuộc năm 2025` 
     });
 }
 
@@ -219,7 +250,7 @@ for(let i = 1; i <= 15; i++) {
         year: 2026, 
         code: codeStr, 
         title: `BỘ ĐỀ ${codeStr} (NĂM 2026)`, 
-        description: `Bộ đề thi trắc nghiệm kiến thức số ${codeStr} thuộc năm 2026` 
+        description: `Bộ đề thi trắc nghiệm số ${codeStr} thuộc năm 2026` 
     });
 }
 
@@ -262,7 +293,7 @@ function renderHomeScreen() {
                     <div class="exam-card-title">${item.title}</div>
                     <div class="exam-card-info">${item.description}</div>
                 </div>
-                <div style="display: flex; justify-content: flex-end; align-items: center;">
+                <div style="display: flex; justify-content: flex-end;">
                     <div class="btn-start">Vào Thi</div>
                 </div>
             </div>`;
@@ -275,24 +306,13 @@ function loadExamScript(codeStr, year, callback) {
 
     const script = document.createElement("script");
     script.id = "dynamic-exam-script";
-    
-    if (year === 2025) {
-        script.src = `data/de-${codeStr}-2025.js`;
-    } else {
-        script.src = `data/de-${codeStr}.js`;
-    }
+    script.src = (year === 2025) ? `data/de-${codeStr}-2025.js` : `data/de-${codeStr}.js`;
 
     script.onload = () => {
-        if (window.CURRENT_EXAM_DATA) {
-            callback(null, window.CURRENT_EXAM_DATA);
-        } else {
-            callback(new Error("Dữ liệu trống"));
-        }
+        if (window.CURRENT_EXAM_DATA) callback(null, window.CURRENT_EXAM_DATA);
+        else callback(new Error("Dữ liệu trống"));
     };
-
-    script.onerror = () => {
-        callback(new Error("Không tìm thấy file"));
-    };
+    script.onerror = () => callback(new Error("Không tìm thấy file"));
 
     document.head.appendChild(script);
 }
@@ -300,20 +320,12 @@ function loadExamScript(codeStr, year, callback) {
 function startExam(codeStr, year) {
     loadExamScript(codeStr, year, (err, examData) => {
         if (err) {
-            const fileName = year === 2025 ? `de-${codeStr}-2025.js` : `de-${codeStr}.js`;
-            alert(`Chưa tìm thấy dữ liệu cho Bộ đề ${codeStr} năm ${year}!\n(Hãy đảm bảo bạn đã lưu file data/${fileName})`);
+            const fileName = (year === 2025) ? `de-${codeStr}-2025.js` : `de-${codeStr}.js`;
+            alert(`Chưa tìm thấy file data/${fileName}!`);
             return;
         }
 
-        currentExam = {
-            ...examData,
-            questions: shuffleArray(examData.questions)
-        };
-
-        if (!currentExam.questions || currentExam.questions.length === 0) {
-            alert("Bộ đề này chưa có câu hỏi nào!");
-            return;
-        }
+        currentExam = { ...examData, questions: shuffleArray(examData.questions) };
 
         document.getElementById("home-page").style.display = "none";
         document.getElementById("exam-page").style.display = "block";
@@ -332,6 +344,11 @@ function startExam(codeStr, year) {
         window.removeEventListener('resize', updateAllMatchingLines);
         window.addEventListener('resize', updateAllMatchingLines);
     });
+}
+
+function toggleMobileGrid() {
+    const grid = document.getElementById("question-grid");
+    grid.classList.toggle("open");
 }
 
 function goHome() {
@@ -368,9 +385,10 @@ function renderSidebarGrid() {
         badge.id = `badge-${i}`;
         badge.innerText = i + 1;
         badge.onclick = () => {
+            if (window.innerWidth <= 768) toggleMobileGrid();
             const el = document.getElementById(`q-card-${i}`);
             if(el) {
-                const headerOffset = window.innerWidth <= 768 ? 120 : 0;
+                const headerOffset = window.innerWidth <= 768 ? 60 : 0;
                 const elementPosition = el.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 window.scrollTo({ top: offsetPosition, behavior: "smooth" });
@@ -436,16 +454,13 @@ function renderQuestions() {
 function onClickMatchingLeft(el) {
     if(isSubmitted) return;
     const qIndex = el.dataset.q;
-
     document.querySelectorAll(`#matching-wrapper-${qIndex} .m-left`).forEach(i => i.classList.remove("selected"));
-    
     activeMatchingLeft = el;
     el.classList.add("selected");
 }
 
 function onClickMatchingRight(el) {
     if(isSubmitted || !activeMatchingLeft) return;
-
     const qIndex = el.dataset.q;
     if(activeMatchingLeft.dataset.q !== qIndex) return;
 
@@ -453,18 +468,14 @@ function onClickMatchingRight(el) {
     const rightId = el.dataset.id;
 
     for (let lKey in matchingLinks[qIndex]) {
-        if (matchingLinks[qIndex][lKey] === Number(rightId)) {
-            delete matchingLinks[qIndex][lKey];
-        }
+        if (matchingLinks[qIndex][lKey] === Number(rightId)) delete matchingLinks[qIndex][lKey];
     }
 
     matchingLinks[qIndex][leftId] = Number(rightId);
-
     activeMatchingLeft.classList.remove("selected");
     activeMatchingLeft = null;
 
     userAnswers[qIndex] = matchingLinks[qIndex];
-    
     markAnswered(qIndex);
     updateMatchingClasses(qIndex);
     drawMatchingLines(qIndex);
@@ -472,7 +483,6 @@ function onClickMatchingRight(el) {
 
 function updateMatchingClasses(qIndex) {
     document.querySelectorAll(`#matching-wrapper-${qIndex} .m-item`).forEach(i => i.classList.remove("matched"));
-    
     const links = matchingLinks[qIndex] || {};
     for (let lId in links) {
         const rId = links[lId];
@@ -485,7 +495,6 @@ function drawMatchingLines(qIndex) {
     const wrapper = document.getElementById(`matching-wrapper-${qIndex}`);
     const svg = document.getElementById(`svg-layer-${qIndex}`);
     if(!svg || !wrapper) return;
-
     svg.innerHTML = "";
 
     const wrapperRect = wrapper.getBoundingClientRect();
@@ -493,7 +502,6 @@ function drawMatchingLines(qIndex) {
 
     for (let leftId in links) {
         const rightId = links[leftId];
-
         const leftEl = document.getElementById(`m-left-${qIndex}-${leftId}`);
         const rightEl = document.getElementById(`m-right-${qIndex}-${rightId}`);
 
@@ -503,7 +511,6 @@ function drawMatchingLines(qIndex) {
 
             const x1 = lRect.right - wrapperRect.left;
             const y1 = lRect.top + lRect.height / 2 - wrapperRect.top;
-
             const x2 = rRect.left - wrapperRect.left;
             const y2 = rRect.top + rRect.height / 2 - wrapperRect.top;
 
@@ -514,8 +521,7 @@ function drawMatchingLines(qIndex) {
             path.setAttribute("d", pathData);
             path.setAttribute("fill", "none");
             path.setAttribute("stroke", "#3182ce");
-            path.setAttribute("stroke-width", "3");
-            path.setAttribute("stroke-linecap", "round");
+            path.setAttribute("stroke-width", "2.5");
 
             svg.appendChild(path);
         }
@@ -600,8 +606,7 @@ function submitExam() {
     const unansweredCount = totalQuestions - answeredCount;
 
     if (unansweredCount > 0) {
-        const confirmSubmit = confirm(`⚠️ Bạn còn ${unansweredCount} câu hỏi chưa trả lời!\n\nBạn có chắc chắn muốn nộp bài không?`);
-        if (!confirmSubmit) return;
+        if (!confirm(`⚠️ Bạn còn ${unansweredCount} câu hỏi chưa trả lời!\n\nBạn có muốn nộp bài không?`)) return;
     }
 
     isSubmitted = true;
@@ -612,7 +617,6 @@ function submitExam() {
     currentExam.questions.forEach((q, index) => {
         const badge = document.getElementById(`badge-${index}`);
         badge.classList.remove("answered");
-
         const hasAnswered = userAnswers.hasOwnProperty(index);
 
         if(q.type === "single") {
@@ -623,12 +627,8 @@ function submitExam() {
                 if(userOpt === optIdx && userOpt !== q.answer) optBtn.classList.add("opt-wrong");
             });
 
-            if(userOpt === q.answer) { 
-                correctCount++; 
-                badge.classList.add("correct"); 
-            } else if (hasAnswered) {
-                badge.classList.add("wrong"); 
-            }
+            if(userOpt === q.answer) { correctCount++; badge.classList.add("correct"); }
+            else if (hasAnswered) badge.classList.add("wrong");
         }
         else if(q.type === "multiple") {
             const userArr = userAnswers[index] || [];
@@ -640,12 +640,8 @@ function submitExam() {
                 else if(userArr.includes(optIdx)) optBtn.classList.add("opt-wrong");
             });
 
-            if(isCorrect) { 
-                correctCount++; 
-                badge.classList.add("correct"); 
-            } else if (hasAnswered) {
-                badge.classList.add("wrong"); 
-            }
+            if(isCorrect) { correctCount++; badge.classList.add("correct"); }
+            else if (hasAnswered) badge.classList.add("wrong");
         }
         else if(q.type === "fill") {
             const input = document.getElementById(`fill-${index}`);
@@ -653,11 +649,10 @@ function submitExam() {
 
             if(val === q.answer.toLowerCase() && hasAnswered) {
                 input.classList.add("opt-correct");
-                correctCount++; 
-                badge.classList.add("correct"); 
+                correctCount++; badge.classList.add("correct");
             } else if (hasAnswered) {
                 input.classList.add("opt-wrong");
-                badge.classList.add("wrong"); 
+                badge.classList.add("wrong");
             }
         }
         else if(q.type === "matching") {
@@ -668,11 +663,8 @@ function submitExam() {
             }
 
             if(isCorrect && Object.keys(userMap).length === Object.keys(q.answer).length && hasAnswered) {
-                correctCount++; 
-                badge.classList.add("correct"); 
-            } else if (hasAnswered) {
-                badge.classList.add("wrong"); 
-            }
+                correctCount++; badge.classList.add("correct");
+            } else if (hasAnswered) badge.classList.add("wrong");
 
             q.left.forEach((_, lIdx) => {
                 const lEl = document.getElementById(`m-left-${index}-${lIdx}`);
@@ -691,17 +683,7 @@ function submitExam() {
         }
     });
 
-    const wrongCount = totalQuestions - correctCount;
-
-    alert(
-        `🎉 HOÀN THÀNH BÀI THI!\n\n` +
-        `----------------------------------\n` +
-        `✅ Số câu đúng: ${correctCount} / ${totalQuestions}\n` +
-        `❌ Số câu sai/chưa làm: ${wrongCount}\n` +
-        `   └ Trong đó chưa trả lời: ${unansweredCount}\n` +
-        `⏱️ Thời gian làm bài: ${document.getElementById("timer").innerText}\n` +
-        `----------------------------------`
-    );
+    alert(`🎉 KẾT QUẢ BÀI THI\n\n✅ Số câu đúng: ${correctCount} / ${totalQuestions}\n⏱️ Thời gian: ${document.getElementById("timer").innerText}`);
 }
 
 function resetExam() {
